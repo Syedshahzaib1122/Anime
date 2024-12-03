@@ -1,0 +1,73 @@
+.anime-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: var(--spacing-md);
+    margin-top: var(--spacing-md);
+}
+
+.anime-card {
+    background-color: var(--card-bg);
+    border-radius: var(--radius-md);
+    overflow: hidden;
+    transition: transform 0.3s ease;
+}
+
+.anime-card:hover {
+    transform: translateY(-5px);
+}
+
+.anime-image {
+    position: relative;
+    aspect-ratio: 2/3;
+}
+
+.anime-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: var(--spacing-sm);
+    background: linear-gradient(transparent, rgba(0, 0, 0, 0.8));
+    color: white;
+    font-size: 0.875rem;
+}
+
+.episode-count {
+    background-color: var(--primary-color);
+    padding: 2px 6px;
+    border-radius: var(--radius-sm);
+}
+
+.rating {
+    float: right;
+}
+
+.anime-info {
+    padding: var(--spacing-sm);
+}
+
+.anime-info h3 {
+    font-size: 1rem;
+    margin-bottom: 4px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.anime-info p {
+    font-size: 0.875rem;
+    color: var(--text-muted);
+}
+
+h2 {
+    color: var(--text-color);
+    font-size: 1.5rem;
+    margin-bottom: var(--spacing-md);
+    font-weight: 600;
+}
